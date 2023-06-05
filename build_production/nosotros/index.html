@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="/nosotros">
+        <meta name="description" content="En Construcción">
+        <title>Inelab</title>
+        <meta property="og:title" content="Inelab" />
+        <meta property="og:description" content="En Construcción" />
+        <meta property="og:url" content="/nosotros" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/images/logo.png" />
+        <meta property="og:image:alt" content="Inelab" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="/assets/images/site.webmanifest">
+        <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=1cc2198349b25b38173c11bfdc87dcdb">
+        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/build/css/animate.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+        <script defer src="/assets/build/js/main.js?id=9a3976b92064a906dd1560b2bb4e8ca2"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+        <script src="assets/build/js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
+            </head>
+    <body class="text-gray-900 font-sans antialiased">
+        <nav
+      class="flex items-center justify-between flex-wrap p-4 fixed w-full z-50 top-0"
+      x-data="{ isOpen: false }"
+      @keydown.escape="isOpen = false"
+      :class="{ 'shadow-xl bg-stone-100' : isOpen , 'bg-white' : !isOpen}"
+    >
+      <!--Logo etc-->
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <a href="/">
+        <img class="w-24 md:w-32" src="/assets/images/inelab.svg" alt="Logo Inelab">
+        </a>
+      </div>
+
+      <!--Toggle button (hidden on large screens)-->
+      <button
+        @click="isOpen = !isOpen"
+        type="button"
+        class="block lg:hidden px-2 text-sky-400 focus:outline-none focus:text-aky-500 text-xl"
+        :class="{ 'transition transform-180': isOpen }"
+      >
+        <svg
+          class="h-6 w-6 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            x-show="isOpen"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+          />
+          <path
+            x-show="!isOpen"
+            fill-rule="evenodd"
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+          />
+        </svg>
+      </button>
+
+      <!--Menu-->
+      <div
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
+        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+        @click.away="isOpen = false"
+        x-show.transition="true"
+      >
+      <ul
+          class="lg:pt-0 list-reset lg:flex justify-end lg:flex-1 items-center mt-10 md:mt-0 text-center md:text-left"
+        >
+          <li class="">
+            <a
+              class="inline-block py-2 px-4 text-stone-900 no-underline hover:text-sky-500 uppercase tracking-wider md:border-b-2 md:border-white md:hover:border-sky-500 transition h-full"
+              href="/"
+              @click="isOpen = false"
+              >Inicio
+            </a>
+          </li>
+          <li class="">
+            <a
+              class="inline-block py-2 px-4 text-stone-900 no-underline hover:text-sky-500 uppercase tracking-wider md:border-b-2 md:border-white md:hover:border-sky-500 transition h-full"
+              href="/nosotros"
+              @click="isOpen = false"
+              >Nosotros
+            </a>
+          </li>
+          <li class="">
+            <a
+              class="inline-block py-2 px-4 text-stone-900 no-underline hover:text-sky-500 uppercase tracking-wider md:border-b-2 md:border-white md:hover:border-sky-500 transition h-full"
+              href="/servicios"
+              @click="isOpen = false"
+              >Servicios
+            </a>
+          </li>
+          <li class="md:px-3 px-0 py-5 md:py-0">
+            <a
+              class="bg-sky-400 px-5 py-3 text-white rounded font-bold hover:bg-sky-300 uppercase tracking-wider"
+              href="/contacto"
+              @click="isOpen = false"
+              >Contacto
+            </a>
+          </li>
+      </ul>
+      </div>
+    </nav>
+        
+<div class="h-12"></div>
+<section class="py-10 md:py-20 container max-w-6xl px-5 md:px-0 mx-auto">
+    <div class="grid md:grid-cols-5 grid-cols-1 gap-10 md:gap-20 items-center">
+        <div class="md:col-span-2 space-y-5">
+        <div class="relative">
+    <h3 class="uppercase font-semibold text-stone-800 tracking-widest wow fadeInRight">Acerca de nosotros</h3>
+    <div class="w-14 absolute -left-16 h-px bg-stone-800 top-3"></div>
+</div>        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 tracking-wide wow fadeInRight" data-wow-delay="0.25s">Tu socio confiable en la búsqueda de sistemas de filtración y limpieza profesional.</h2>    </div>
+    <div class="md:col-span-3 space-y-5">
+        <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    <span class="font-bold text-lg text-stone-800">Soluciones personalizadas que se adaptan a las necesidades únicas de cada cliente.</span><br><br>
+            Somos un equipo apisonado dedicado a proporcionar soluciones en la filtración y limpieza profesional
+            en áreas críticas. Nuestro compromiso radica en ofrecer productos y servicios confiables que superen 
+            las expectativas de nuestros clientes.
+</p>    </div>
+    </div>
+</section><section class="px-5 md:px-0 mx-auto relative">
+    <img class="rounded-md container mx-auto max-w-6xl relative z-10 wow fadeInUp" src="/assets/images/banner.jpg" alt="">
+    <div class="bg-sky-50 absolute left-0 right-0 bottom-0 z-0 h-1/2"></div>
+</section><div class="bg-sky-50">
+    <section class="py-10 md:py-20 container max-w-6xl px-5 md:px-0 mx-auto">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-20 items-center">
+        <div class="space-y-3">
+            <h4 class="text-sm text-stone-800 tracking-widest uppercase font-semibold wow fadeInRight">Nuestra misión</h4>
+            <h3 class="font-bold text-xl text-stone-800 wow fadeInRight tracking-wide" data-wow-delay="0.25s">Brindar asesoramiento experto a nuestros clientes</h3>
+            <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    así como accesorios de filtración para laboratorios químicos. Buscamos brindar soluciones. 
+                Buscamos brindar soluciones personalizadas que cumplan las necesidades de nuestros clientes 
+                y destacar como líderes en los campos en los que ofrecemos nuestros servicios.
+</p>        </div>
+        <div class="space-y-3">
+            <h4 class="text-sm text-stone-800 tracking-widest uppercase font-semibold wow fadeInRight">Nuestra visión</h4>
+            <h3 class="font-bold text-xl text-stone-800 wow fadeInRight tracking-wide" data-wow-delay="0.25s">Ser referentes en soluciones de purificación de agua</h3>
+            <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    Buscamos crear un impacto positivo en la industria promoviendo un acceso fácil y seguro. Nos
+                esforzamos por ser reconocidos como lideres en el mercado, impulsados por la excelencia la
+                sostenibilidad el compromiso con la satisfacción total de nuestros clientes.
+</p>        </div>
+    </div>
+</section>    <div class="container mx-auto max-w-6xl space-y-10 md:pb-20 pb-10 px-5">
+        <div class="flex items-center text-stone-800">
+            <div class="flex-none pr-5 wow fadeInRight uppercase tracking-wide" data-wow-delay="0.5s"><p>Nuestros clientes</p></div>
+            <div class="h-px bg-stone-800 flex-1 wow fadeInRight" data-wow-delay="0.5s"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-10 md:gap-20 items-center">
+                
+                            <img class="wow fadeInUp max-h-20 mx-auto mix-blend-multiply" src="/assets/images/logos/ciatej.svg" alt="Ciatej" data-wow-delay="0.1s">
+                                            <img class="wow fadeInUp max-h-20 mx-auto mix-blend-multiply" src="/assets/images/logos/udg.png" alt="UDG" data-wow-delay="0.2s">
+                                            <img class="wow fadeInUp max-h-20 mx-auto mix-blend-multiply" src="/assets/images/logos/consejo.webp" alt="Consejo Regulador del Tequila" data-wow-delay="0.3s">
+                                            <img class="wow fadeInUp max-h-20 mx-auto mix-blend-multiply" src="/assets/images/logos/jose-cuervo.png" alt="José Cuervo" data-wow-delay="0.4s">
+                                            <img class="wow fadeInUp max-h-20 mx-auto mix-blend-multiply" src="/assets/images/logos/synthon.png" alt="Synthon" data-wow-delay="0.5s">
+                                            <img class="wow fadeInUp max-h-20 mx-auto mix-blend-multiply" src="/assets/images/logos/sauza.png" alt="Sauza" data-wow-delay="0.6s">
+                                    </div>
+    </div>
+</div>
+<div class="px-5 md:px-0">
+    <section class="container mx-auto max-w-6xl flex items-center justify-center bg-cover bg-top py-16 md:py-32 md:my-20 my-10 rounded-md relative z-0 wow fadeInUp px-10" style="background-image: url(/assets/images/callto.jpg)">
+        <div class="bg-sky-900/50 absolute -z-10 inset-0 rounded-md"></div>
+        <div class="md:w-2/3 z-10 space-y-5 text-center">
+            <h2 class="text-3xl md:text-6xl text-white font-bold wow fadeInUp text-center" data-wow-delay="0.5s">Descubre como mejorar tus operaciones
+                de filtración en el laboratorio. </h2>
+            <button class="bg-sky-400 px-5 py-3 text-white rounded font-bold transform transition hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:bg-sky-300 wow fadeIn" data-wow-delay="0.5s">
+    <a href="/contacto">Contáctanos</a>
+</button>        </div>
+    </section>
+</div>
+
+
+        <footer class="bg-stone-800 py-10 text-white text-center">
+        <p class="font-italic">"Mi mejor publicicad, es la que hacen los clientes satisfechos"</p>
+        <p>2022 Todos los Derechos Reservados Inelab</p>
+</footer>    </body>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+        });
+    </script>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="/servicios">
+        <meta name="description" content="En Construcción">
+        <title>Inelab</title>
+        <meta property="og:title" content="Inelab" />
+        <meta property="og:description" content="En Construcción" />
+        <meta property="og:url" content="/servicios" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/images/logo.png" />
+        <meta property="og:image:alt" content="Inelab" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="/assets/images/site.webmanifest">
+        <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=1cc2198349b25b38173c11bfdc87dcdb">
+        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/build/css/animate.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+        <script defer src="/assets/build/js/main.js?id=9a3976b92064a906dd1560b2bb4e8ca2"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+        <script src="assets/build/js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
+            </head>
+    <body class="text-gray-900 font-sans antialiased">
+        <nav
+      class="flex items-center justify-between flex-wrap p-4 fixed w-full z-50 top-0"
+      x-data="{ isOpen: false }"
+      @keydown.escape="isOpen = false"
+      :class="{ 'shadow-xl bg-stone-100' : isOpen , 'bg-white' : !isOpen}"
+    >
+      <!--Logo etc-->
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <a href="/">
+        <img class="w-24 md:w-32" src="/assets/images/inelab.svg" alt="Logo Inelab">
+        </a>
+      </div>
+
+      <!--Toggle button (hidden on large screens)-->
+      <button
+        @click="isOpen = !isOpen"
+        type="button"
+        class="block lg:hidden px-2 text-sky-400 focus:outline-none focus:text-aky-500 text-xl"
+        :class="{ 'transition transform-180': isOpen }"
+      >
+        <svg
+          class="h-6 w-6 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            x-show="isOpen"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+          />
+          <path
+            x-show="!isOpen"
+            fill-rule="evenodd"
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+          />
+        </svg>
+      </button>
+
+      <!--Menu-->
+      <div
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
+        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+        @click.away="isOpen = false"
+        x-show.transition="true"
+      >
+      <ul
+          class="lg:pt-0 list-reset lg:flex justify-end lg:flex-1 items-center mt-10 md:mt-0 text-center md:text-left"
+        >
+          <li class="">
+            <a
+              class="inline-block py-2 px-4 text-stone-900 no-underline hover:text-sky-500 uppercase tracking-wider md:border-b-2 md:border-white md:hover:border-sky-500 transition h-full"
+              href="/"
+              @click="isOpen = false"
+              >Inicio
+            </a>
+          </li>
+          <li class="">
+            <a
+              class="inline-block py-2 px-4 text-stone-900 no-underline hover:text-sky-500 uppercase tracking-wider md:border-b-2 md:border-white md:hover:border-sky-500 transition h-full"
+              href="/nosotros"
+              @click="isOpen = false"
+              >Nosotros
+            </a>
+          </li>
+          <li class="">
+            <a
+              class="inline-block py-2 px-4 text-stone-900 no-underline hover:text-sky-500 uppercase tracking-wider md:border-b-2 md:border-white md:hover:border-sky-500 transition h-full"
+              href="/servicios"
+              @click="isOpen = false"
+              >Servicios
+            </a>
+          </li>
+          <li class="md:px-3 px-0 py-5 md:py-0">
+            <a
+              class="bg-sky-400 px-5 py-3 text-white rounded font-bold hover:bg-sky-300 uppercase tracking-wider"
+              href="/contacto"
+              @click="isOpen = false"
+              >Contacto
+            </a>
+          </li>
+      </ul>
+      </div>
+    </nav>
+        
+<div class="h-12"></div>
+<section class="py-10 md:py-20 container max-w-6xl px-5 md:px-0 mx-auto">
+    <div class="grid md:grid-cols-5 grid-cols-1 gap-10 md:gap-20 items-center">
+        <div class="space-y-5 col-span-1 md:col-span-3">
+        <div class="relative">
+    <h3 class="uppercase font-semibold text-stone-800 tracking-widest wow fadeInRight">Calibración</h3>
+    <div class="w-14 absolute -left-16 h-px bg-stone-800 top-3"></div>
+</div>        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 tracking-wide wow fadeInRight" data-wow-delay="0.25s">Mediciones precisas</h2>        <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    <p>Garantizamos mediciones precisas y confiables en todo momento. Nuestro equipo de técnicos especializados utiliza equipos de calibración de última generación y procedimientos rigurosos para verificar y ajustar los parámetros clave de tus sistemas.</p>
+
+<p>Nos aseguramos de que tus sistemas estén operando dentro de los rangos de rendimiento establecidos, lo que garantiza resultados consistentes y de alta calidad.</p>
+</p>    </div>
+    <div class="col-span1 md:col-span-2">
+        <img class="rounded-md w-full wow fadeIn" src="/assets/images/calibracion.jpg" alt="Calibración" data-wow-delay="0.5s">
+    </div>
+        <div class="space-y-5 col-span-1 md:col-span-3">
+        <div class="relative">
+    <h3 class="uppercase font-semibold text-stone-800 tracking-widest wow fadeInRight">Control de Calidad</h3>
+    <div class="w-14 absolute -left-16 h-px bg-stone-800 top-3"></div>
+</div>        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 tracking-wide wow fadeInRight" data-wow-delay="0.25s">Asesoría en calidad</h2>        <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    <p>Validamos tu equipo con procedimientos aceptados internacionalmente para que tu equipo cumpla con
+las GLP,C y GLP y asegurar que ha sido instalado y mantenido apropiadamente.</p>
+</p>    </div>
+    <div class="col-span1 md:col-span-2">
+        <img class="rounded-md w-full wow fadeIn" src="/assets/images/calidad.jpg" alt="Control de Calidad" data-wow-delay="0.5s">
+    </div>
+        <div class="space-y-5 col-span-1 md:col-span-3">
+        <div class="relative">
+    <h3 class="uppercase font-semibold text-stone-800 tracking-widest wow fadeInRight">Instalación</h3>
+    <div class="w-14 absolute -left-16 h-px bg-stone-800 top-3"></div>
+</div>        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 tracking-wide wow fadeInRight" data-wow-delay="0.25s">Rendimiento Máximo</h2>        <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    <p>Nos encargamos de todo el proceso, desde la planificación inicial hasta la puesta en parcha exitosa de
+tus sistemas. Nos aseguramos de que cada componte se configurado correctamente y que todos los sistemas estén conectados y funcionado de manera óptima.</p>
+</p>    </div>
+    <div class="col-span1 md:col-span-2">
+        <img class="rounded-md w-full wow fadeIn" src="/assets/images/instalacion.jpg" alt="Instalación" data-wow-delay="0.5s">
+    </div>
+        <div class="space-y-5 col-span-1 md:col-span-3">
+        <div class="relative">
+    <h3 class="uppercase font-semibold text-stone-800 tracking-widest wow fadeInRight">Mantenimiento</h3>
+    <div class="w-14 absolute -left-16 h-px bg-stone-800 top-3"></div>
+</div>        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 tracking-wide wow fadeInRight" data-wow-delay="0.25s">Asistencia especializada</h2>        <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    <p>Nuestro servicio de mantenimiento especializado para los equipos de purificación de agua ultrapura es la clave para garantizar un rendimiento óptimo y duradero. Contamos con un equipo de técnicos altamente capacitados y certificados que se encargan de mantener tus sistemas en condiciones óptimas.</p>
+
+<p>Además, ofrecemos programas de mantenimiento personalizados adaptados a tus necesidades específicas. Ya sea que necesites mantenimiento preventivo regular o asistencia técnica en caso de averías, estamos aquí para brindarte el soporte confiable que necesitas.</p>
+</p>    </div>
+    <div class="col-span1 md:col-span-2">
+        <img class="rounded-md w-full wow fadeIn" src="/assets/images/mantenimiento.jpg" alt="Mantenimiento" data-wow-delay="0.5s">
+    </div>
+        <div class="space-y-5 col-span-1 md:col-span-3">
+        <div class="relative">
+    <h3 class="uppercase font-semibold text-stone-800 tracking-widest wow fadeInRight">Validación</h3>
+    <div class="w-14 absolute -left-16 h-px bg-stone-800 top-3"></div>
+</div>        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 tracking-wide wow fadeInRight" data-wow-delay="0.25s">Aceptación Internacional</h2>        <p class="tracking-wide text-stone-500 wow fadeInRight" data-wow-delay="0.5s">
+    <p>Validamos tu equipo con procedimientos aceptados internacionalmente para que tu equipo cumpla con
+las GLP,C y GLP y asegurar que ha sido instalado y mantenido apropiadamente.</p>
+</p>    </div>
+    <div class="col-span1 md:col-span-2">
+        <img class="rounded-md w-full wow fadeIn" src="/assets/images/validacion.jpg" alt="Validación" data-wow-delay="0.5s">
+    </div>
+    </div>
+</section><section class="py-10 md:py-20 container max-w-6xl px-5 md:px-20 mx-auto bg-stone-800 rounded-md">
+    <div class="grid md:grid-cols-5 grid-cols-1 gap-10 md:gap-20 items-center">
+        <div class="col-span-1 md:col-span-3 space-y-5">
+            <h3 class="uppercase font-semibold text-white tracking-widest wow fadeInRight">Politica de Cálidad</h3>
+            <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wide wow fadeInRight" data-wow-delay="0.25s">Certificados en calidad</h2>
+            <p class="tracking-wide text-stone-100 wow fadeInRight" data-wow-delay="0.5s">
+                En colaboración con nuestros proveedores nos complementamos con las normas internacionales de calidad 
+                de los productos por ellos elaborados y con los Certificados de Calidad de sus productos que garantizan 
+                el cumplimiento de las normas internacionales. Además nos apoyan en caso que tener problemas de calidad 
+                de sus productos para su reemplazo y si es necesario con pruebas de calidad.
+            </p>
+        </div>
+        <div class="col-span-1 md:col-span-2 space-y-5">
+            <img class="w-full mx-auto rounded-md" src="/assets/images/politica.jpg" alt="Pólitica de Calidad">
+        </div>
+    </div>
+    
+</section><div class="px-5 md:px-0">
+    <section class="container mx-auto max-w-6xl flex items-center justify-center bg-cover bg-top py-16 md:py-32 md:my-20 my-10 rounded-md relative z-0 wow fadeInUp px-10" style="background-image: url(/assets/images/callto.jpg)">
+        <div class="bg-sky-900/50 absolute -z-10 inset-0 rounded-md"></div>
+        <div class="md:w-2/3 z-10 space-y-5 text-center">
+            <h2 class="text-3xl md:text-6xl text-white font-bold wow fadeInUp text-center" data-wow-delay="0.5s">Descubre como mejorar tus operaciones
+                de filtración en el laboratorio. </h2>
+            <button class="bg-sky-400 px-5 py-3 text-white rounded font-bold transform transition hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:bg-sky-300 wow fadeIn" data-wow-delay="0.5s">
+    <a href="/contacto">Contáctanos</a>
+</button>        </div>
+    </section>
+</div>
+
+        <footer class="bg-stone-800 py-10 text-white text-center">
+        <p class="font-italic">"Mi mejor publicicad, es la que hacen los clientes satisfechos"</p>
+        <p>2022 Todos los Derechos Reservados Inelab</p>
+</footer>    </body>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+        });
+    </script>
+</html>

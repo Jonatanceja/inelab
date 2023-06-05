@@ -1,0 +1,1 @@
+<h2 class="text-3xl md:text-4xl font-bold text-stone-800 tracking-wide wow fadeInRight" data-wow-delay="0.25s">{{ $slot }}</h2>
